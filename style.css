@@ -2,8 +2,11 @@
 
 vw--->ancho del viewport
 vh-->alto del viewport
-vmin-->minimo del viewport
+vmin-->minimo del lado del viewport
 porcentajes
+vmax-->maximo del lado  del viewport
+
+
 em-->TAMAÑO DE FUENTE DEL CONTEXTO
     100% DEL TAMAÑO DE FUENTE EN EL CONTEXTO
 rem-->TAMAÑO DE FUENTE DEL ROOT
@@ -20,6 +23,9 @@ x
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --scroll-size:13px;
+}
 
 header{
     background-color: red;
@@ -27,27 +33,18 @@ header{
     text-align: center;
     padding: 5vmin 0;
 }
-p{
-    background: goldenrod;
-    margin: 2em;
-    font-size:1.5em;
-}
-
-.conteiner{
+body{
+    min-height:100vh;
     display: flex;
-    flex-wrap: wrap;
-}
-p{
-    flex:1 1 15rem;
-    font-size: 2em;
-}
-strong{
-    font-size: 2em;
-}
+    flex-direction: column;
 
-span{
-    font-size: 2em;
 }
 
 
+footer{
+    margin-top:auto;
+    background: goldenrod;
+    padding:1em;
+    width: calc(95vw - var(--scroll-size) );
 
+}
