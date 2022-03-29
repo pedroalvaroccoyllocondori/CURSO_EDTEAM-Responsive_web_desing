@@ -1,38 +1,53 @@
+/* UNIDADES DE MEDIDIDA relativas
 
+vw--->ancho del viewport
+vh-->alto del viewport
+vmin-->minimo del viewport
+porcentajes
+em-->TAMAÑO DE FUENTE DEL CONTEXTO
+    100% DEL TAMAÑO DE FUENTE EN EL CONTEXTO
+rem-->TAMAÑO DE FUENTE DEL ROOT
+    100% del tamaño de fuente del root
+UNIDADES ABSOLUTAS 
+PX
 
-body{
-    background-color: blueviolet;
-}
+x
 
-/* min-width ---->  mobile first 
-   max-width ---->  desktop first 
 
 */
-
-@media screen and (min-width:550px){
-    body{
-        background-color: brown;
-    }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* 
-orientation: landscape ---> 1px mas grande del largo al ancho
-orientation: portraid ---> 1px mas grande del largo al ancho
-
-*/
-
-@media screen and (orientation: landscape){
-    body{
-        background-color: orange;
-    }
+header{
+    background-color: red;
+    color:#fff;
+    text-align: center;
+    padding: 5vmin 0;
 }
-/* 
-
-min-aspect-ratio:4/3 --> proporcion
-*/
-
-@media screen and (min-aspect-ratio:4/3){
-    body{
-        background-color: aqua;
-    }
+p{
+    background: goldenrod;
+    margin: 2em;
+    font-size:1.5em;
 }
+
+.conteiner{
+    display: flex;
+    flex-wrap: wrap;
+}
+p{
+    flex:1 1 15rem;
+    font-size: 2em;
+}
+strong{
+    font-size: 2em;
+}
+
+span{
+    font-size: 2em;
+}
+
+
+
