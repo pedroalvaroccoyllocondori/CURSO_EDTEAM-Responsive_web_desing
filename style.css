@@ -1,0 +1,38 @@
+
+
+body{
+    background-color: blueviolet;
+}
+
+/* min-width ---->  mobile first 
+   max-width ---->  desktop first 
+
+*/
+
+@media screen and (min-width:550px){
+    body{
+        background-color: brown;
+    }
+}
+
+/* 
+orientation: landscape ---> 1px mas grande del largo al ancho
+orientation: portraid ---> 1px mas grande del largo al ancho
+
+*/
+
+@media screen and (orientation: landscape){
+    body{
+        background-color: orange;
+    }
+}
+/* 
+
+min-aspect-ratio:4/3 --> proporcion
+*/
+
+@media screen and (min-aspect-ratio:4/3){
+    body{
+        background-color: aqua;
+    }
+}
