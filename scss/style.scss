@@ -1,0 +1,33 @@
+$puntosQuiebre:(
+    small:0px,
+    medio:640px,
+    grande:1024,
+    xgrande:1200,
+    xxgrande:1440px
+);
+// primero los tamños pequenos en caso de usar min-with
+// lo inverso al usar max-width
+
+@mixin rwd($resolucion){
+    @if map-has-key($puntosQuiebre,$resolucion){
+        @media screen and (max-width: map-get($puntosQuiebre,$resolucion)) {
+            @content ;
+        }
+        
+    }@else{
+        
+        @media screen and (max-width:$resolucion) {
+            @content ;
+        }
+    }
+}
+
+body{
+    background:red;
+    @include rwd(medio){
+        background:green;
+    }
+    @include rwd(300px){
+        background:goldenrod;
+    }
+}
