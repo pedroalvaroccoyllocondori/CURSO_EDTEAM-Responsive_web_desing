@@ -1,33 +1,19 @@
-$puntosQuiebre:(
-    small:0px,
-    medio:640px,
-    grande:1024,
-    xgrande:1200,
-    xxgrande:1440px
-);
-// primero los tamños pequenos en caso de usar min-with
-// lo inverso al usar max-width
-
-@mixin rwd($resolucion){
-    @if map-has-key($puntosQuiebre,$resolucion){
-        @media screen and (max-width: map-get($puntosQuiebre,$resolucion)) {
-            @content ;
-        }
-        
-    }@else{
-        
-        @media screen and (max-width:$resolucion) {
-            @content ;
-        }
+.video{
+    height:0;
+    padding-bottom: 56.25%;
+    background-color: goldenrod;
+    position: relative;
+    >iframe{
+        position: absolute;
+        width: 100%;
+        height: 100%;
     }
 }
 
-body{
-    background:red;
-    @include rwd(medio){
-        background:green;
-    }
-    @include rwd(300px){
-        background:goldenrod;
-    }
+.contenedor-video{
+    width: 75%;
+    max-width: 960px;
+    min-width: 320px;
+    margin-left:auto;
+    margin-right:auto;
 }
