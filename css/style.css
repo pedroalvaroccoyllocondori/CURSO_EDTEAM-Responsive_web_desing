@@ -4,6 +4,21 @@
   margin-right: auto;
   background: goldenrod; }
 
-img {
-  max-width: 100%;
-  height: auto; }
+.imagen {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  background: rebeccapurple;
+  position: relative;
+  background: red;
+  background-image: url(../assets/imagen1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; }
+  .imagen::before {
+    content: '';
+    display: block;
+    padding-bottom: 100%; }
+  @media screen and (min-width: 768px) {
+    .imagen {
+      background-image: url(../assets/imagen2.jpg); } }
