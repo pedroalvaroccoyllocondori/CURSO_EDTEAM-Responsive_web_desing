@@ -1,27 +1,14 @@
-@mixin proporcion($ancho,$largo){
-    display: grid;
-    grid-template-columns: repeat($ancho,1fr);
-    grid-template-rows: repeat($largo,1fr);
-    background:rebeccapurple;
-    position: relative;
-    &::before{
-        content: '';
-        display: block;
-        padding-bottom: 100%;
-    }
-}
 
-.video{
- @include proporcion(9,9);
-  >iframe{
-      position: absolute;
-      width: 100%;
-      height: 100%;
-  }
-}
 
-.contenedor-video{
+
+.contenedor{
     width: 50%;
     margin-left:auto;
     margin-right:auto;
+    background: goldenrod;
+}
+
+img{
+    max-width: 100%;
+    height:auto;
 }
