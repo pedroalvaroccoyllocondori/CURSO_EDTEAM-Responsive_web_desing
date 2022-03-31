@@ -1,4 +1,9 @@
 
+// CSSOM css object model
+// window.getComputedStyle(document.getElementById('imagen'))   --->obtener el elemento
+// window.getComputedStyle(document.getElementById('imagen')).getPropertyValue('height')---->obtener el atributo del elemento
+
+
 @mixin proporcion($ancho,$largo){
     display: grid;
     grid-template-columns: repeat($ancho,1fr);
@@ -30,4 +35,11 @@
     @media screen and (min-width: 768px){
         background-image: url(../assets/imagen2.jpg)
     }
+
+
+}
+
+
+.red{
+    background-color: goldenrod;
 }
