@@ -1,27 +1,7 @@
-.contenedor {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  background: goldenrod; }
+:root {
+  --nombre:'alvaro'; }
 
-.imagen {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  background: rebeccapurple;
-  position: relative;
-  background: red;
-  background-image: url(../assets/imagen1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center; }
-  .imagen::before {
-    content: '';
-    display: block;
-    padding-bottom: 100%; }
-  @media screen and (min-width: 768px) {
-    .imagen {
-      background-image: url(../assets/imagen2.jpg); } }
-
-.red {
-  background-color: goldenrod; }
+h2 {
+  background-color: aquamarine; }
+  h2::after {
+    content: var(--nombre); }
