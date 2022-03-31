@@ -1,19 +1,15 @@
-const obtenerAnchoScroll=()=>innerWidth - document.documentElement.clientWidth
-
-console.log(obtenerAnchoScroll());
-
-document.documentElement.style.setProperty('--scroll-size',obtenerAnchoScroll());
 
 
 // CSSOM css object model
 // window.getComputedStyle(document.getElementById('imagen'))   --->obtener el elemento
 // window.getComputedStyle(document.getElementById('imagen')).getPropertyValue('height')---->obtener el atributo del elemento
 
-document.body.style.backgroundColor='black'
+// METODO1 ACCEDIENDO A EL ELEEMTO
+document.body.style.backgroundColor='gray'
 
-// AÑADIR CLASES A UN ELEMENTO
+//METODO 2---> AÑADIR CLASES A UN ELEMENTO
 document.body.classList.add('red')
-// creacion de un objeto style del
+//MEDOTO 3--> CREACION DE UNA LISTA DE ESTILOS
 
 const color='yellow'
 const size=15
@@ -23,5 +19,17 @@ const styles=`
     margin:${size}rem;
 
 `
-
 document.getElementById('example').setAttribute('style',styles) 
+// METODO 4-->FUNCIONE DE ESTILOS
+
+const estilos=(elemento,stiloss)=>{
+    elemento.setAttribute('style',stiloss)
+}
+
+const h2=document.getElementById('h2')
+const stilosh2=`
+    background:green;
+    color:white;
+    margin:10rem;
+`
+estilos(h2,stilosh2)
